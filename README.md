@@ -68,8 +68,8 @@ Need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
 ### On Node 
-Run celery -A task worker --loglevel=info, it will get tasks from rabbitmq, then work tasks.
-Need install : celery
+    Run celery -A task worker --loglevel=info, it will get tasks from rabbitmq, then work tasks.
+    Need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
 command line run this to get tasks: 
