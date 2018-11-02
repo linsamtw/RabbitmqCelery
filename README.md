@@ -1,6 +1,9 @@
 # Rabbitmq & Celery
 
-It is a Distributed queue system, you can send many jobs and many workers will do job for you. Even you can monitor them.
+It is a Distributed queue system, you can send many jobs and many workers will do job for you. Even you can monitor them.<br>
+
+**note** : If you only have one computer, the linode is good support, the min calculator only need $5/no, it is enough for worker.
+
 
 ### Install RabbitMQ
     apt-get update 
