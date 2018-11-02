@@ -42,7 +42,7 @@ The queues on rabbitmq web only can appear by worker user.
 
 ------------------------------------------------------------------------------------
 ### Test
-The **worker** and **producer** must be different computers.<br>
+The Distributed queue system has three roles.
 
 | Role | Job |
 |------|-----|
@@ -50,7 +50,7 @@ The **worker** and **producer** must be different computers.<br>
 |Worker|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
 |Broker|Rabbitmq server, transfer tasks.|
 
-The Distributed queue system has three roles.
+The **worker** and **producer** must be different computers.
 
 ------------------------------------------------------------------------------------
 Create Tasks.py, 
