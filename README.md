@@ -52,7 +52,8 @@ Create task.py,
 It must use command , run on spyder will fail
 
     celery -A task worker --loglevel=info
-    # or celery on quene task
+or celery on quene task
+
     celery -A task worker --loglevel=info -Q quene
 
 and then, call func send.py
