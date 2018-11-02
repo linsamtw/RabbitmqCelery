@@ -52,25 +52,30 @@ Create task.py,
 It must use command , run on spyder will fail
 
     celery -A task worker --loglevel=info
-and then, call function send.py
+The worker, task, will wait for tasks from rabbitmq, and run tasks.
+How push tasks to rabbitmq? 
+Run send.py on server( rabbitmq server ), it is producer.
 
     from task import add
     result = add.delay(10,4)
+### The worker and producer mush be different computers. 
+Producer push tasks to rabbitmq, and one or more than one worker get tasks from rabbitmq, rabbitmq is a broker.
 #--------------------------------------------------------------------------------
 ### On Server 
-run rabbitmq and send.py, then it will send tasks to rabbitmq.
-Install : rabbitmq-server, celery
+Run rabbitmq and send.py, then sned.py will send tasks to rabbitmq.
+Need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
 ### On Node 
-run celery -A task worker --loglevel=info, it will get tasks from rabbitmq, then work tasks.
-Install : celery
+Run celery -A task worker --loglevel=info, it will get tasks from rabbitmq, then work tasks.
+Need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
-celery -A task worker --loglevel=info 
+command line run this to get tasks: 
+
+    celery -A task worker --loglevel=info 
 
 ### Set Queue Group
-
 Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
 login web by worker user, then queues will show tasks group by **queue_group_name**
 Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
