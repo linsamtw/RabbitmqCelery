@@ -38,11 +38,11 @@ or
 
 ### Test
 **The worker and producer mush be different computers.**<br>
-The Distributed queue system, Rabbitmq and Celery has three roles.
+The Distributed queue system has three roles.
 
 **Producer** : Push tasks to rabbitmq.<br>
 **Worker** :  Get tasks from rabbitmq and do tasks, you maybe have more one workers.<br>
-**Rabbitmq** : A broker, transfer tasks.<br>
+**Broker** : Rabbitmq server, transfer tasks.<br>
 
 Create Tasks.py, 
     
@@ -63,7 +63,7 @@ Create Worker.py,
     app = Celery("task",
                  include=["Tasks"],# tasks file name
                  broker='pyamqp://worker_user:worker_password@Rabbitmq_IP:5672/')
-Create  Producer.py
+Create Producer.py
 
     import os, sys
     PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
@@ -71,13 +71,12 @@ Create  Producer.py
     from Tasks import add
     add.delay(0,0)
 
-It must use command, run on spyder will fail
+### On Node
+The Worker role, run this command to get tasks.
 
-    celery -A task worker --loglevel=info
-The worker, task, will wait for tasks from rabbitmq, and run tasks.
-How push tasks to rabbitmq? 
-Run send.py on server( rabbitmq server ), it is producer.
-
+    celery -A Worker worker --loglevel=info
+### On Server
+The Producer and Broker role, run this command to push
     from task import add
     result = add.delay(10,4)
 
