@@ -17,9 +17,7 @@ https://www.cnblogs.com/Sisiflying/p/6386988.html
 
     cd /user/sbin
     ./rabbitmqctl set_user user password # set user and password
-    # Creating user "user" …
     ./rabbitmqctl set_user_tags user administrator # set user status
-    # Setting tags for user "user" to [administrator] …
     ./rabbitmqctl set_permissions -p / user ".*" ".*" ".*"     # set connect IP
 or
 
