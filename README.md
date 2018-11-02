@@ -12,11 +12,10 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     
 then we can connect rabbitmq on
 http://IP:15672/  or http://localhost:15672/  
-
 if ERROR: node with name "rabbit" already running on "localhost"
 https://www.cnblogs.com/Sisiflying/p/6386988.html 
 
---------------------------------------------------------------------------------------------------------------
+------------------
 ### Create Web Account
 
     cd /user/sbin
@@ -43,7 +42,7 @@ or
     
 The queues on rabbitmq web only can appear by worker user.
 
-------------------------------------------------------------------------------------
+------------------
 ### Test
 The Distributed queue system has three roles.
 
@@ -55,7 +54,7 @@ The Distributed queue system has three roles.
 
 The **worker** and **producer** must be different computers.
 
-------------------------------------------------------------------------------------
+------------------
 Create Tasks.py, 
 
     import os, sys
@@ -82,7 +81,8 @@ Create Producer.py
     sys.path.append(PATH)
     from Tasks import add
     add.delay(0,0)
-
+    
+------------------
 ### On Node
 The Worker role, run this command to get tasks.
 
