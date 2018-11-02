@@ -35,9 +35,9 @@ or
     rabbitmqctl add_user worker_user worker_password
     rabbitmqctl set_user_tags worker_user policymaker
     rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
-
+------------------------------------------------------------------------------------
 ### Test
-**The worker and producer mush be different computers.**<br>
+The worker and producer mush be different computers.<br>
 The Distributed queue system has three roles.
 
 **Producer** : Push tasks to rabbitmq.<br>
