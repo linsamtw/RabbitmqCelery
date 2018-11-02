@@ -46,7 +46,7 @@ The **worker** and **producer** must be different computers.<br>
 |Broker|Rabbitmq server, transfer tasks.|
 
 The Distributed queue system has three roles.<br>
-
+------------------------------------------------------------------------------------
 Create Tasks.py, 
     
     import os, sys
