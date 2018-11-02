@@ -63,8 +63,8 @@ Run send.py on server( rabbitmq server ), it is producer.
 Producer push tasks to rabbitmq, and one or more than one worker get tasks from rabbitmq, rabbitmq is a broker.
 #--------------------------------------------------------------------------------
 ### On Server 
-Run rabbitmq and send.py, then sned.py will send tasks to rabbitmq.
-Need install : rabbitmq-server, celery
+    Run rabbitmq and send.py, then sned.py will send tasks to rabbitmq.
+    Need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
 ### On Node 
