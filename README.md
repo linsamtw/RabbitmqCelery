@@ -37,12 +37,14 @@ or
     rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
 ------------------------------------------------------------------------------------
 ### Test
-The worker and producer mush be different computers.<br>
+The **worker** and **producer** must be different computers.<br>
 The Distributed queue system has three roles.
 
-**Producer** : Push tasks to rabbitmq.<br>
-**Worker** :  Get tasks from rabbitmq and do tasks, you maybe have more one workers.<br>
-**Broker** : Rabbitmq server, transfer tasks.<br>
+| Role | Job |
+|------|-----|
+|**Producer**|Push tasks to rabbitmq.|
+|**Worker**|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
+|**Broker**|Rabbitmq server, transfer tasks.|
 
 Create Tasks.py, 
     
