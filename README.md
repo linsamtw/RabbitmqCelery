@@ -37,6 +37,9 @@ or
     rabbitmqctl add_user worker_user worker_password
     rabbitmqctl set_user_tags worker_user policymaker
     rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
+    
+The queues on rabbitmq web only can appear by worker user.
+
 ------------------------------------------------------------------------------------
 ### Test
 The **worker** and **producer** must be different computers.<br>
