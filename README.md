@@ -27,28 +27,49 @@ or
 ### Create Worker Account
 
     cd /user/sbin
-    ./rabbitmqctl add_user worker worker
-    ./rabbitmqctl set_user_tags worker policymaker
-    ./rabbitmqctl set_permissions -p / worker ".*" ".*" ".*"   
+    ./rabbitmqctl add_user worker_user worker_password
+    ./rabbitmqctl set_user_tags worker_user policymaker
+    ./rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
 or
 
-    rabbitmqctl add_user worker worker
-    rabbitmqctl set_user_tags worker policymaker
-    rabbitmqctl set_permissions -p / worker ".*" ".*" ".*"   
+    rabbitmqctl add_user worker_user worker_password
+    rabbitmqctl set_user_tags worker_user policymaker
+    rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
 
 ### Test
-Create task.py, 
+**The worker and producer mush be different computers.**
+The Distributed queue system, Rabbitmq and Celery has three role.
 
-    from task import app
+**Producer** : Push tasks to rabbitmq.<br>
+**Worker** :  Get tasks from rabbitmq, you maybe have more one workers.<br>
+**Rabbitmq** : A broker, transfer tasks.<br>
 
-    @app.task
+Create Tasks.py, 
+    
+    import os, sys
+    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
+    sys.path.append(PATH)
+    from Worker import app
+    @app.task()
     def add(x,y):
-        for i in range(1000):
-            print(i)
         return x+y
 
-Create task.py, 
+Create Worker.py, 
 
+    import os, sys
+    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
+    sys.path.append(PATH)
+    from celery import Celery
+    app = Celery("task",
+                 include=["Tasks"],# tasks file name
+                 broker='pyamqp://worker_user:worker_password@Rabbitmq_IP:5672/')
+Create  Producer.py
+
+    import os, sys
+    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
+    sys.path.append(PATH)
+    from Tasks import add
+    add.delay(0,0)
 
 It must use command, run on spyder will fail
 
@@ -59,8 +80,6 @@ Run send.py on server( rabbitmq server ), it is producer.
 
     from task import add
     result = add.delay(10,4)
-#### The worker and producer mush be different computers. 
-Producer push tasks to rabbitmq, and one or more than one worker get tasks from rabbitmq, rabbitmq is a broker.
 
 --------------------------------------------------------------------------------
 ### On Server 
