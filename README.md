@@ -4,8 +4,7 @@
     apt-get update 
     apt-get install erlang
     apt-get install rabbitmq-server
-    # web running
-    sudo rabbitmq-plugins enable rabbitmq_management
+    sudo rabbitmq-plugins enable rabbitmq_management# web running
     
 then we can connect on web
 http://IP:15672/  or http://localhost:15672/  
