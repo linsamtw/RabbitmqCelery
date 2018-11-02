@@ -42,9 +42,9 @@ The Distributed queue system has three roles.
 
 | Role | Job |
 |------|-----|
-|**Producer**|Push tasks to rabbitmq.|
-|**Worker**|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
-|**Broker**|Rabbitmq server, transfer tasks.|
+|Producer|Push tasks to rabbitmq.|
+|Worker|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
+|Broker|Rabbitmq server, transfer tasks.|
 
 Create Tasks.py, 
     
