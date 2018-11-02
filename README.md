@@ -38,10 +38,10 @@ or
 
 ### Test
 **The worker and producer mush be different computers.**<br>
-The Distributed queue system, Rabbitmq and Celery has three role.
+The Distributed queue system, Rabbitmq and Celery has three roles.
 
 **Producer** : Push tasks to rabbitmq.<br>
-**Worker** :  Get tasks from rabbitmq, you maybe have more one workers.<br>
+**Worker** :  Get tasks from rabbitmq and do tasks, you maybe have more one workers.<br>
 **Rabbitmq** : A broker, transfer tasks.<br>
 
 Create Tasks.py, 
