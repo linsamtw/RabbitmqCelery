@@ -101,9 +101,9 @@ vim /etc/rc.local # it will run on boot-->
 
 --------------------------------------------------------------------------------------------------------------
 ### Set Queue Group
-Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
-login web by worker user, then queues will show tasks group by **queue_group_name**
-Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
+* Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
+* Login web : worker user, then queues will show tasks group by **queue_group_name**
+* Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
 
 ### Run celery on Python3
 
