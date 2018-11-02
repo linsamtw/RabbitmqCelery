@@ -37,11 +37,9 @@ or
     rabbitmqctl set_permissions -p / worker ".*" ".*" ".*"   
 
 ### Test
-
 Create task.py, 
 
-    from celery import Celery,chain
-    app = Celery('tasks', broker='pyamqp://worker:worker@IP:5672/')
+    from task import app
 
     @app.task
     def add(x,y):
@@ -49,7 +47,10 @@ Create task.py,
             print(i)
         return x+y
 
-It must use command , run on spyder will fail
+Create task.py, 
+
+
+It must use command, run on spyder will fail
 
     celery -A task worker --loglevel=info
 The worker, task, will wait for tasks from rabbitmq, and run tasks.
