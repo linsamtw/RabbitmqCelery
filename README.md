@@ -14,6 +14,7 @@ http://IP:15672/  or http://localhost:15672/
 if ERROR: node with name "rabbit" already running on "localhost"
 https://www.cnblogs.com/Sisiflying/p/6386988.html 
 
+--------------------------------------------------------------------------------------------------------------
 ### Create Web Account
 
     cd /user/sbin
@@ -96,6 +97,7 @@ Node need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
 
+--------------------------------------------------------------------------------------------------------------
 ### Set Queue Group
 Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
 login web by worker user, then queues will show tasks group by **queue_group_name**
