@@ -45,7 +45,8 @@ The **worker** and **producer** must be different computers.<br>
 |Worker|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
 |Broker|Rabbitmq server, transfer tasks.|
 
-The Distributed queue system has three roles.<br>
+The Distributed queue system has three roles.
+
 ------------------------------------------------------------------------------------
 Create Tasks.py, 
     
