@@ -1,4 +1,6 @@
-# RabbitmqCelery
+# Rabbitmq & Celery
+
+It is a Distributed queue system, you can send many jobs and many workers will do job for you. Even you can monitor them.
 
 ### Install RabbitMQ
     apt-get update 
