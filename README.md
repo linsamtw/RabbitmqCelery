@@ -37,7 +37,7 @@ or
     rabbitmqctl set_permissions -p / worker_user ".*" ".*" ".*"   
 
 ### Test
-**The worker and producer mush be different computers.**
+**The worker and producer mush be different computers.**<br>
 The Distributed queue system, Rabbitmq and Celery has three role.
 
 **Producer** : Push tasks to rabbitmq.<br>
