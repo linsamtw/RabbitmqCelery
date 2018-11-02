@@ -55,9 +55,6 @@ The **worker** and **producer** must be different computers.
 ------------------------------------------------------------------------------------
 Create Tasks.py, 
     
-    import os, sys
-    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
-    sys.path.append(PATH)
     from Worker import app
     @app.task()
     def add(x,y):
@@ -65,18 +62,12 @@ Create Tasks.py,
 
 Create Worker.py, 
 
-    import os, sys
-    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
-    sys.path.append(PATH)
     from celery import Celery
     app = Celery("task",
                  include=["Tasks"],# tasks file name
                  broker='pyamqp://worker_user:worker_password@Rabbitmq_IP:5672/')
 Create Producer.py
 
-    import os, sys
-    PATH = '/'.join( os.path.abspath(__file__).split('/')[:-1] )
-    sys.path.append(PATH)
     from Tasks import add
     add.delay(0,0)
 
