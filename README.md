@@ -77,23 +77,15 @@ The Worker role, run this command to get tasks.
     celery -A Worker worker --loglevel=info
 ### On Server
 The Producer and Broker role, run this command to push
-    from task import add
-    result = add.delay(10,4)
-
+    
+    python3 Producer.py
 --------------------------------------------------------------------------------
-### On Server 
-    Run rabbitmq and send.py, then sned.py will send tasks to rabbitmq.
-    Need install : rabbitmq-server, celery
+Server need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
-### On Node 
-    Run celery -A task worker --loglevel=info, it will get tasks from rabbitmq, then work tasks.
-    Need install : celery
+Node need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
-command line run this to get tasks: 
-
-    celery -A task worker --loglevel=info 
 
 ### Set Queue Group
 Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
