@@ -101,6 +101,14 @@ Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
 login web by worker user, then queues will show tasks group by **queue_group_name**
 Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
 
+### Run celery on Python3
+
+pip3 install virtualenv <br>
+virtualenv celery_for_python3<br>
+source celery_for_python3/bin/activate<br>
+then, run celery<br>
+       
+       celery -A Worker worker --loglevel=info
 
 
 <!--Set Watch
