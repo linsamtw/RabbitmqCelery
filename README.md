@@ -8,7 +8,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     apt-get install rabbitmq-server
     sudo rabbitmq-plugins enable rabbitmq_management# web running
     
-then we can connect on web
+then we can connect rabbitmq on
 http://IP:15672/  or http://localhost:15672/  
 
 if ERROR: node with name "rabbit" already running on "localhost"
