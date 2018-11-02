@@ -59,9 +59,10 @@ Run send.py on server( rabbitmq server ), it is producer.
 
     from task import add
     result = add.delay(10,4)
-### The worker and producer mush be different computers. 
+#### The worker and producer mush be different computers. 
 Producer push tasks to rabbitmq, and one or more than one worker get tasks from rabbitmq, rabbitmq is a broker.
-#--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
 ### On Server 
     Run rabbitmq and send.py, then sned.py will send tasks to rabbitmq.
     Need install : rabbitmq-server, celery
