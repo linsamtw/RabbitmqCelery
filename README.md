@@ -27,8 +27,8 @@ It is a Distributed queue system, you can send many jobs and many workers will d
 
 then we can connect rabbitmq on
 http://IP:15672/  or http://localhost:15672/  
-if ERROR: node with name "rabbit" already running on "localhost"
-https://www.cnblogs.com/Sisiflying/p/6386988.html 
+<!--if ERROR: node with name "rabbit" already running on "localhost"
+https://www.cnblogs.com/Sisiflying/p/6386988.html -->
 
 ### Install Celery
     apt-get install python3-pip
