@@ -15,10 +15,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
 * ### [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
 * ### [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
 * ### [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
-* ### []()
-* ### []()
-* ### []()
-* ### []()
+* ### [Set Watchdog](https://github.com/f496328mm/RabbitmqCelery#set-watchdog)
 
 ----------------------------
 
@@ -27,11 +24,16 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     apt-get install erlang
     apt-get install rabbitmq-server
     sudo rabbitmq-plugins enable rabbitmq_management# web running
-    
+
 then we can connect rabbitmq on
 http://IP:15672/  or http://localhost:15672/  
 if ERROR: node with name "rabbit" already running on "localhost"
 https://www.cnblogs.com/Sisiflying/p/6386988.html 
+
+### Install Celery
+    apt-get install python3-pip
+    export LC_ALL="en_US.UTF-8"
+    pip3 install celery
 
 ------------------
 ### Create Web Account
@@ -137,8 +139,7 @@ vim /etc/rc.local # it will run on boot-->
     ps aux | grep celery | awk '{print $2}' | xargs # 列出 PID
     ps aux | grep celery | awk '{print $2}' | xargs kill -9 # 列出 PID 並砍掉 Process
 ### Git No Need Password
-paste your SSH key，from  '~/.ssh/id_rsa.pub'<br>
-if you have no id_rsa.pub, you can follow that to generate ssh key<br>
+Paste your SSH key，from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can follow that to generate ssh key<br>
 
     cd ~/.ssh/
     ssh-keygen
