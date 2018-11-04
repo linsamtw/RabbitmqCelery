@@ -127,6 +127,20 @@ vim /etc/rc.local # it will run on boot-->
     virtualenv celery_for_python3
     source celery_for_python3/bin/activate
 
+### Kill Process
+
+    ps -A | grep celery | awk '{print $1}' | xargs # 列出 PID
+    ps aux | grep celery | awk '{print $2}' | xargs # 列出 PID
+    ps aux | grep celery | awk '{print $2}' | xargs kill -9 # 列出 PID 並砍掉 Process
+### Git No Need Password
+paste your SSH key，from  '~/.ssh/id_rsa.pub'<br>
+if you have no id_rsa.pub, you can follow that to generate ssh key<br>
+
+    cd ~/.ssh/
+    ssh-keygen
+then, paste to gitlab or github -> option -> ssh key
+
+
 <!--Set Watch
 pip install watchdog
 
