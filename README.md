@@ -1,8 +1,18 @@
 # Rabbitmq & Celery
 
+
+
 It is a Distributed queue system, you can send many jobs and many workers will do job for you. Even you can monitor them.<br>
 
 **note** : If you only have one computer, the linode is good support, the min calculator only need $5/no, it is enough for being worker.
+
+#### [Install](https://github.com/f496328mm/RabbitmqCelery#install-rabbitmq)
+#### [Create Account](https://github.com/f496328mm/RabbitmqCelery#create-web-account)
+#### [Example](https://github.com/f496328mm/RabbitmqCelery#Example)
+#### [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
+#### [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
+
+----------------------------
 
 ### Install RabbitMQ
     apt-get update 
@@ -43,6 +53,8 @@ or
 The queues on rabbitmq web only can appear by worker user.
 
 ------------------
+
+### Example
 The Distributed queue system has three roles.
 
 | Role | Job |
@@ -54,7 +66,6 @@ The Distributed queue system has three roles.
 The **worker** and **producer** must be different computers.
 
 ------------------
-### Test
 Create Tasks.py, 
 
     import os, sys
@@ -91,7 +102,7 @@ The Worker role, run this command to get tasks.
 The Producer and Broker role, run this command to push
     
     python3 Producer.py
---------------------------------------------------------------------------------
+-------------------------------
 Server need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
@@ -99,12 +110,14 @@ Node need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
 
---------------------------------------------------------------------------------------------------------------
+-------------------------------
 ### Set Queue Group
 * Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
 * Login web : worker user, then queues will show tasks group by **queue_group_name**
 * Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
 
+-------------------------------
+## Other
 ### Run celery on Python3
 
     pip3 install virtualenv 
