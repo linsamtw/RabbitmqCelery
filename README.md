@@ -11,6 +11,9 @@ It is a Distributed queue system, you can send many jobs and many workers will d
 * ### [Example](https://github.com/f496328mm/RabbitmqCelery#Example)
 * ### [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
 * ### [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
+* ### [Other](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#other)
+* ### []()
+* ### []()
 
 ----------------------------
 
