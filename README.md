@@ -110,10 +110,6 @@ vim /etc/rc.local # it will run on boot-->
     pip3 install virtualenv 
     virtualenv celery_for_python3
     source celery_for_python3/bin/activate
-then, run celery on command line
-       
-       celery -A Worker worker --loglevel=info
-
 
 <!--Set Watch
 pip install watchdog
