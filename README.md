@@ -12,6 +12,11 @@ It is a Distributed queue system, you can send many jobs and many workers will d
 * ### [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
 * ### [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
 * ### [Other](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#other)
+* ### [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
+* ### [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
+* ### [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
+* ### []()
+* ### []()
 * ### []()
 * ### []()
 
@@ -126,7 +131,6 @@ vim /etc/rc.local # it will run on boot-->
     pip3 install virtualenv 
     virtualenv celery_for_python3
     source celery_for_python3/bin/activate
-
 ### Kill Process
 
     ps -A | grep celery | awk '{print $1}' | xargs # 列出 PID
@@ -139,6 +143,13 @@ if you have no id_rsa.pub, you can follow that to generate ssh key<br>
     cd ~/.ssh/
     ssh-keygen
 then, paste to gitlab or github -> option -> ssh key
+### Set Watchdog
+If your celery on running, but code has be changed.
+The celery process can't update, because the code has be compiled.
+The Watchdog which provides watchmedo, it can re-loading code into Celery after a change.
+
+    pip3 install watchdog
+    watchmedo auto-restart -- celery -A task worker --loglevel=info -Q add,add2,class
 
 
 <!--Set Watch
