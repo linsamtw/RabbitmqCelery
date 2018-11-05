@@ -127,9 +127,8 @@ vim /etc/rc.local # it will run on boot-->
     source celery_for_python3/bin/activate
 ### Kill Process
 
-    ps -A | grep celery | awk '{print $1}' | xargs # 列出 PID
-    ps aux | grep celery | awk '{print $2}' | xargs # 列出 PID
-    ps aux | grep celery | awk '{print $2}' | xargs kill -9 # 列出 PID 並砍掉 Process
+    ps aux | grep celery | awk '{print $2}' | xargs # print PID
+    ps aux | grep celery | awk '{print $2}' | xargs kill -9 # print PID and kill Process
 ### Git No Need Password
 Paste your SSH key，from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can follow that to generate ssh key<br>
 
