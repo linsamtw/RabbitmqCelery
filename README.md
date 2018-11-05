@@ -12,7 +12,9 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
     *  [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
 * Folwer
-    *  []()
+    *  [Install](https://github.com/f496328mm/RabbitmqCelery#install)
+* Supervisor
+    *  [Install](https://github.com/f496328mm/RabbitmqCelery#install-1)
 *  [Other](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#other)
     *  [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
@@ -125,10 +127,11 @@ vim /etc/rc.local # it will run on boot-->
 Flower is a monitor system, it can monitor workers.
 ### install
     pip3 install flower
+### Run
+
     # web running
     flower -A Worker --port=5555
-Node run this command
-
+    #Node run this command
     celery -A Worker worker --loglevel=info
 
 # Supervisor
@@ -173,6 +176,8 @@ change github pull and push to no need password
     #You can change the URL with:
     git remote set-url origin git+ssh://git@github.com/username/reponame.git
 
+### git must be auto pull latest code
+
 ### Set Watchdog
 If your celery on running, but the code will be changed.
 The celery process can't update, because the code has be compiled.
@@ -181,6 +186,8 @@ The Watchdog which provides watchmedo, it can re-loading code into Celery after 
     pip3 install watchdog
     watchmedo auto-restart -- celery -A task worker --loglevel=info
 
+If temperature too high or memory too less, then reboot.
 
-
+### Worker
+Linode or Raspberry Pi will install our python packages, we will have packages list.
 
