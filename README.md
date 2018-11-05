@@ -40,12 +40,12 @@ https://www.cnblogs.com/Sisiflying/p/6386988.html -->
 
     cd /user/sbin
     ./rabbitmqctl set_user user password # set user and password
-    ./rabbitmqctl set_user_tags user administrator # set user status
+    ./rabbitmqctl set_user_tags user administrator # set user permission
     ./rabbitmqctl set_permissions -p / user ".*" ".*" ".*"     # set connect IP
 or
 
     rabbitmqctl add_user user password # set user and password
-    rabbitmqctl set_user_tags user administrator # set user status
+    rabbitmqctl set_user_tags user administrator # set user permission
     rabbitmqctl set_permissions -p / user ".*" ".*" ".*"     # set connect IP
 
 ### Create Worker Account
