@@ -141,11 +141,6 @@ The celery process can't update, because the code has be compiled.
 The Watchdog which provides watchmedo, it can re-loading code into Celery after a change.
 
     pip3 install watchdog
-    watchmedo auto-restart -- celery -A task worker --loglevel=info -Q add,add2,class
+    watchmedo auto-restart -- celery -A task worker --loglevel=info
 
-
-<!--Set Watch
-pip install watchdog
-
-watchmedo auto-restart -- celery -A task worker --loglevel=info -Q add,add2,class-->
 
