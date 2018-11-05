@@ -76,13 +76,6 @@ The Distributed queue system has three roles.
 The **worker** and **producer** should be different computers.
 
 ------------------
-Create Tasks.py, 
-
-    from Worker import app
-    @app.task()
-    def add(x,y):
-        return x+y
-        
 Create Worker.py, 
 
     from celery import Celery
@@ -90,6 +83,13 @@ Create Worker.py,
                  include=["Tasks"],# tasks file name
                  broker='pyamqp://worker_user:worker_password@Rabbitmq_IP:5672/')
 
+Create Tasks.py, 
+
+    from Worker import app
+    @app.task()
+    def add(x,y):
+        return x+y
+        
 Create Producer.py
 
     from Tasks import add
