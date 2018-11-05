@@ -2,7 +2,7 @@
 
 
 
-It is a Distributed queue system, you can send many jobs and many workers will do job for you. Even you can monitor them.<br>
+It is a Distributed queue system, you can send many jobs and many workers will do job for you. And you can monitor them.<br>
 
 **note** : If you only have one computer, the **linode** is good support, the min calculator only need $5/month, it is enough for being worker.
 
