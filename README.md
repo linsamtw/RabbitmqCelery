@@ -134,7 +134,14 @@ Paste your SSH key from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can
 
     cd ~/.ssh/
     ssh-keygen
-then, paste to gitlab or github -> option -> ssh key
+then, paste to gitlab or github -> option -> ssh key<br>
+
+change github pull and push to no need password
+
+    git remote -v #show git is follow https or ssh. push or pull by no password must be ssh.
+    #You can change the URL with:
+    git remote set-url origin git+ssh://git@github.com/username/reponame.git
+
 ### Set Watchdog
 If your celery on running, but the code will be changed.
 The celery process can't update, because the code has be compiled.
