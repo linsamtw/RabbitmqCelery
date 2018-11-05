@@ -118,6 +118,24 @@ vim /etc/rc.local # it will run on boot-->
 * Login web : worker user, then queues will show tasks group by **queue_group_name**
 * Get tasks : celery -A task worker --loglevel=info -Q **queue_group_name** 
 
+# Flower
+
+Flower is a monitor system, it can monitor workers.
+### install
+    pip3 install flower
+    # web running
+    flower -A Worker --port=5555
+Node run this command
+
+    celery -A Worker worker --loglevel=info
+
+# Supervisor
+### install
+    test
+then
+    
+    sudo vim /etc/supervisor/conf.d/celery_*.conf
+
 -------------------------------
 ## Other
 ### Run celery on Python3
@@ -149,5 +167,7 @@ The Watchdog which provides watchmedo, it can re-loading code into Celery after 
 
     pip3 install watchdog
     watchmedo auto-restart -- celery -A task worker --loglevel=info
+
+
 
 
