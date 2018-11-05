@@ -73,7 +73,7 @@ The Distributed queue system has three roles.
 |Worker|Get tasks from rabbitmq and do tasks, you maybe have more one workers.|
 |Broker|Rabbitmq server, transfer tasks.|
 
-The **worker** and **producer** must be different computers.
+The **worker** and **producer** should be different computers.
 
 ------------------
 Create Tasks.py, 
