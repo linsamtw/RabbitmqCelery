@@ -176,7 +176,7 @@ change github pull and push to no need password
     #You can change the URL with:
     git remote set-url origin git+ssh://git@github.com/username/reponame.git
 
-### git must be auto pull latest code
+**git must be auto pull latest code**
 
 ### Set Watchdog
 If your celery on running, but the code will be changed.
