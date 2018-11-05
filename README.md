@@ -130,13 +130,13 @@ vim /etc/rc.local # it will run on boot-->
     ps aux | grep celery | awk '{print $2}' | xargs # print PID
     ps aux | grep celery | awk '{print $2}' | xargs kill -9 # print PID and kill Process
 ### Git No Need Password
-Paste your SSH key，from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can follow that to generate ssh key<br>
+Paste your SSH key from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can follow that to generate ssh key.<br>
 
     cd ~/.ssh/
     ssh-keygen
 then, paste to gitlab or github -> option -> ssh key
 ### Set Watchdog
-If your celery on running, but code has be changed.
+If your celery on running, but the code will be changed.
 The celery process can't update, because the code has be compiled.
 The Watchdog which provides watchmedo, it can re-loading code into Celery after a change.
 
