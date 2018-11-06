@@ -10,6 +10,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Create Account](https://github.com/f496328mm/RabbitmqCelery#create-web-account)
     *  [Example](https://github.com/f496328mm/RabbitmqCelery#Example)
     *  [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
+    *  [Reaturn Result](https://github.com/f496328mm/RabbitmqCelery#reaturn-result-by-apply_async)
     *  [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
 * Folwer
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install)
