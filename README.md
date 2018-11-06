@@ -97,7 +97,7 @@ Create Tasks.py,
 Create Producer.py
 
     from Tasks import add
-    add.delay(0,0)
+    add.apply_async(0,0)# 
     
 ------------------
 ### On Node
@@ -109,13 +109,18 @@ The Producer and Broker role, run this command to push
     
     python3 Producer.py
 -------------------------------
+### Return Result By apply_async
+    app = Celery("task",
+                 include=["Tasks"],# tasks file name
+                 backend='rpc://',
+                 broker='pyamqp://worker_user:worker_password@Rabbitmq_IP:5672/')
+-------------------------------
 Server need install : rabbitmq-server, celery
 <!--crontab : git clone url, python3 job-->
 
 Node need install : celery
 <!--crontab : git clone url
 vim /etc/rc.local # it will run on boot-->
-
 -------------------------------
 ### Set Queue Group
 * Send tasks : @app.task change to @app.task( queue = **queue_group_name** )
