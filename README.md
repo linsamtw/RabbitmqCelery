@@ -197,3 +197,10 @@ If temperature too high or memory too less, then reboot.
 ### Worker
 Linode or Raspberry Pi will install our python packages, we will have packages list.
 
+
+### Set Linode System Date
+The date from linode is follow US. If you are Taiwan, you can change the date from the command
+
+      sudo dpkg-reconfigure tzdata
+
+
