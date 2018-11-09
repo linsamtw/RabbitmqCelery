@@ -148,7 +148,7 @@ then
     sudo vim /etc/supervisor/conf.d/celery_*.conf
 
     [program:celeryd_1]
-    directory=/var/hoard/tripresso3/crawler_tg
+    directory=your directory path
     command=celery -A tasks worker --loglevel=error --maxtasksperchild=1 --concurrency=8 --hostname=%%h_1 -Q seat_float
     stdout_logfile=/var/log/celery/celeryd_1.log
     stderr_logfile=/var/log/celery/celeryd_1.err
