@@ -141,6 +141,16 @@ Flower is a monitor system, it can monitor workers.
     celery -A Worker worker --loglevel=info
 
 # Supervisor
+It must be install by root.
+
+      sudo su
+      python # Running celery, it it run this python version.
+You can install Anaconda(3) to control your version.
+The quation must key yes.
+
+      Do you wish the installer to prepend the Anaconda3 install location
+      to PATH in your /root/.bashrc ? [yes|no]
+
 ### install
     test
 then
