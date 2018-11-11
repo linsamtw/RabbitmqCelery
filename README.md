@@ -152,7 +152,7 @@ The quation must key yes.
       to PATH in your /root/.bashrc ? [yes|no]
 
 ### install
-    test
+    sudo apt-get install supervisor
 then
     
     sudo vim /etc/supervisor/conf.d/celery_*.conf
