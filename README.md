@@ -153,7 +153,16 @@ The quation must key yes.
 
 ### install
     sudo apt-get install supervisor
-then
+### Running
+
+      sudo systemctl enable supervisor 
+      sudo systemctl disable supervisor
+      sudo systemctl status supervisor 
+
+      sudo service supervisor start
+      sudo service supervisor stop
+      sudo service supervisor restart
+### Set
     
     sudo vim /etc/supervisor/conf.d/celery_*.conf
 
@@ -212,5 +221,57 @@ Linode or Raspberry Pi will install our python packages, we will have packages l
 The date from linode is follow US. If you are Taiwan, you can change the date from the command
 
       sudo dpkg-reconfigure tzdata
+
+
+<!--
+
+# git
+*/1 * * * *   pi  bash /home/pi/bin/autoGitForCrawlerTg.sh
+
+Worker
+
+sudo vim /etc/supervisor/conf.d/worker.conf
+
+[program:celeryd_1]
+directory=/worker/gitlab/FinancialMining/Tasks
+command=celery -A Worker worker --loglevel=info --maxtasksperchild=1 --concurrency=8 --hostname=%h_1
+stdout_logfile=/var/log/celery/worker.log
+stderr_logfile=/var/log/celery/worker.err
+autostart=true
+autorestart=true
+startsecs=10
+stopwaitsecs=600
+stopasgroup=true
+killasgroup=true
+
+
+### Rabbitmq&Flower
+
+sudo vim /etc/supervisor/conf.d/flower.conf
+
+      [program:flowerd]
+      command=celery flower --broker=amqp://worker:worker@172.105.212.230:5672/
+      stdout_logfile=/var/log/celery/flowerd.log
+      stderr_logfile=/var/log/celery/flowerd.err
+      autostart=true
+      autorestart=false
+      startsecs=10
+      stopwaitsecs=600
+
+sudo vim /home/worker/gitlab/autogit.sh 
+
+      cd your project path
+      git pull
+
+
+
+
+sudo vim /etc/crontab
+
+# git
+*/1 * * * *   root  bash /worker/gitlab/autogit.sh
+
+
+-->
 
 
