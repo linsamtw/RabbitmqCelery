@@ -147,10 +147,10 @@ It must be install by root.
       sudo su
       python # Running celery, it it run this python version.
 You can install Anaconda(3) to control your version.
-The quation must key yes.
 
       Do you wish the installer to prepend the Anaconda3 install location
       to PATH in your /root/.bashrc ? [yes|no]
+      yes
 
 #### install
     sudo apt-get install supervisor
