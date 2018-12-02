@@ -195,7 +195,7 @@ Paste your SSH key from  '~/.ssh/id_rsa.pub'. If you have no id_rsa.pub, you can
     ssh-keygen
 then, paste to gitlab or github -> option -> ssh key<br>
 
-change github pull and push to no need password
+### change github pull and push to no need password
 
     git remote -v #show git is follow https or ssh. push or pull by no password must be ssh.
     #You can change the URL with:
