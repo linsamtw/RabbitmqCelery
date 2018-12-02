@@ -201,6 +201,25 @@ then, paste to gitlab or github -> option -> ssh key<br>
     git remote -v #show git is follow https or ssh. push or pull by no password must be ssh.
     #You can change the URL with:
     git remote set-url origin git+ssh://git@github.com/username/reponame.git
+### git command 
+      # change loacal branch
+      git checkout master 
+
+      # check local branch version 
+      git branch 
+
+      # create a new branch
+      git branch test 
+
+      # push branch to gitlab or github
+      git push origin test 
+
+      # merge 
+      git checkout master 
+      git merge test
+
+      # delete
+      git branch -d <branch>
 
 **git must be auto pull latest code**
 
