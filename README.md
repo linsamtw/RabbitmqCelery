@@ -3,22 +3,22 @@
 It is a Distributed queue system, you can send many jobs and many workers will do job for you. And you can monitor them.<br>
 
 **note** : If you only have one computer, the **linode** is good support, the min calculator only need $5/month, it is enough for being worker.
-* Rabbitmq & Celery
+* [Rabbitmq & Celery](https://github.com/f496328mm/RabbitmqCelery#rabbitmq--celery-1)
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install-rabbitmq)
     *  [Create Account](https://github.com/f496328mm/RabbitmqCelery#create-web-account)
     *  [Example](https://github.com/f496328mm/RabbitmqCelery#Example)
     *  [Run](https://github.com/f496328mm/RabbitmqCelery#on-node)
     *  [Return Result](https://github.com/f496328mm/RabbitmqCelery#return-result-by-apply_async)
     *  [Set Queue Group](https://github.com/f496328mm/RabbitmqCelery#set-queue-group)
-* Folwer
+* [Folwer](https://github.com/f496328mm/RabbitmqCelery#flower)
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install)
-* Supervisor
+* [Supervisor](https://github.com/f496328mm/RabbitmqCelery#supervisor)
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install-1)
-* Git
+* [Git](https://github.com/f496328mm/RabbitmqCelery#git)
     *  [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
     *  [change github pull and push to no need password](https://github.com/f496328mm/RabbitmqCelery#change-github-pull-and-push-to-no-need-password)
-    *  [git command](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#git-command)
-*  [Other](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#other)
+    *  [git command](https://github.com/f496328mm/RabbitmqCelery#git-command)
+*  [Other](https://github.com/f496328mm/RabbitmqCelery#other)
     *  [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
     *  [Set Watchdog](https://github.com/f496328mm/RabbitmqCelery#set-watchdog)
