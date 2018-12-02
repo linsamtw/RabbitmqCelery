@@ -20,6 +20,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
     *  [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
+    *  [change github pull and push to no need password](https://github.com/f496328mm/RabbitmqCelery#change-github-pull-and-push-to-no-need-password)
     *  [Set Watchdog](https://github.com/f496328mm/RabbitmqCelery#set-watchdog)
 
 ----------------------------
