@@ -1,7 +1,5 @@
 # Rabbitmq & Celery
 
-
-
 It is a Distributed queue system, you can send many jobs and many workers will do job for you. And you can monitor them.<br>
 
 **note** : If you only have one computer, the **linode** is good support, the min calculator only need $5/month, it is enough for being worker.
@@ -16,11 +14,13 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install)
 * Supervisor
     *  [Install](https://github.com/f496328mm/RabbitmqCelery#install-1)
+* Git
+    *  [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
+    *  [change github pull and push to no need password](https://github.com/f496328mm/RabbitmqCelery#change-github-pull-and-push-to-no-need-password)
+    *  [git command](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#git-command)
 *  [Other](https://github.com/f496328mm/RabbitmqCelery/blob/master/README.md#other)
     *  [Run Celery On Python3](https://github.com/f496328mm/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/f496328mm/RabbitmqCelery#kill-process)
-    *  [Git No Need Password](https://github.com/f496328mm/RabbitmqCelery#git-no-need-password)
-    *  [change github pull and push to no need password](https://github.com/f496328mm/RabbitmqCelery#change-github-pull-and-push-to-no-need-password)
     *  [Set Watchdog](https://github.com/f496328mm/RabbitmqCelery#set-watchdog)
 
 ----------------------------
@@ -204,20 +204,15 @@ then, paste to gitlab or github -> option -> ssh key<br>
 ### git command 
       # change loacal branch
       git checkout master 
-
       # check local branch version 
       git branch 
-
       # create a new branch
       git branch test 
-
       # push branch to gitlab or github
       git push origin test 
-
       # merge 
       git checkout master 
       git merge test
-
       # delete
       git branch -d <branch>
 
