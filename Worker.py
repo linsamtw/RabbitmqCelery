@@ -6,6 +6,6 @@ sys.path.append(PATH)
 from celery import Celery
 app = Celery("task",
              include=["Tasks"],
-             broker='pyamqp://worker:worker@172.105.212.230:5672/')
+             broker='pyamqp://worker:worker@localhost:5672/')
 
 
