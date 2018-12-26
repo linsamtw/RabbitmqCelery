@@ -10,7 +10,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run](https://github.com/linsamtw/RabbitmqCelery#on-node)
     *  [Return Result](https://github.com/linsamtw/RabbitmqCelery#return-result-by-apply_async)
     *  [Set Queue Group](https://github.com/linsamtw/RabbitmqCelery#set-queue-group)
-* [Folwer](https://github.com/linsamtw/RabbitmqCelery#flower)
+* [Flower](https://github.com/linsamtw/RabbitmqCelery#flower)
     *  [Install](https://github.com/linsamtw/RabbitmqCelery#install)
 * [Supervisor](https://github.com/linsamtw/RabbitmqCelery#supervisor)
     *  [Install](https://github.com/linsamtw/RabbitmqCelery#install-1)
