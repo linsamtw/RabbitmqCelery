@@ -26,9 +26,9 @@ It is a Distributed queue system, you can send many jobs and many workers will d
 ----------------------------
 ## Rabbitmq & Celery
 #### Install RabbitMQ
-    apt-get update 
-    apt-get install erlang
-    apt-get install rabbitmq-server
+    sudo apt-get update 
+    sudo apt-get install erlang
+    sudo apt-get install rabbitmq-server
     sudo rabbitmq-plugins enable rabbitmq_management# web running
 
 then we can connect rabbitmq on
