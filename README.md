@@ -22,6 +22,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run Celery On Python3](https://github.com/linsamtw/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/linsamtw/RabbitmqCelery#kill-process)
     *  [Set Watchdog](https://github.com/linsamtw/RabbitmqCelery#set-watchdog)
+    *  []()
 
 ----------------------------
 ## Rabbitmq & Celery
@@ -195,17 +196,28 @@ then, paste to gitlab or github -> option -> ssh key<br>
 #### git command 
       # change loacal branch
       git checkout master 
+      
       # check local branch version 
       git branch 
+      
       # create a new branch
       git branch test 
+      
       # push branch to gitlab or github
       git push origin test 
+      
       # merge 
       git checkout master 
       git merge test
+      
       # delete
       git branch -d <branch>
+      
+      # back to last version
+      git reset --hard HEAD^
+      git push --force
+      
+      
 -------------------------------
 ## Other
 #### Run celery on Python3
@@ -237,7 +249,14 @@ Linode or Raspberry Pi will install our python packages, we will have packages l
 The date from linode is follow US. If you are Taiwan, you can change the date from the command
 
       sudo dpkg-reconfigure tzdata
-
+#### update package
+   
+      python3 setup.py sdist
+      twine upload dist/*
+      
+     
+      
+      
 <!--
 
 # git
