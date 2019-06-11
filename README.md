@@ -22,7 +22,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run Celery On Python3](https://github.com/linsamtw/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/linsamtw/RabbitmqCelery#kill-process)
     *  [Set Watchdog](https://github.com/linsamtw/RabbitmqCelery#set-watchdog)
-    *  []()
+    *  [PARTITION](https://github.com/linsamtw/RabbitmqCelery#PARTITION)
 
 ----------------------------
 ## Rabbitmq & Celery
@@ -254,8 +254,22 @@ The date from linode is follow US. If you are Taiwan, you can change the date fr
       python3 setup.py sdist
       twine upload dist/*
       
-     
+#### PARTITION
+create table and PARTITION
+
+      CREATE TABLE t (
+         id INT, 
+         create_time DATETIME
+      )    
+      PARTITION BY RANGE(YEAR(create_time)) (
+         PARTITION p2017 VALUES LESS THAN (2018),
+         PARTITION p2018 VALUES LESS THAN (2019),
+         PARTITION p2019 VALUES LESS THAN (2020)
+      );
+
+add PARTITION
       
+      ALTER TABLE test ADD PARTITION (PARTITION p2020 VALUES LESS THAN (2021))
       
 <!--
 
