@@ -22,7 +22,7 @@ It is a Distributed queue system, you can send many jobs and many workers will d
     *  [Run Celery On Python3](https://github.com/linsamtw/RabbitmqCelery#run-celery-on-python3)
     *  [Kill Process](https://github.com/linsamtw/RabbitmqCelery#kill-process)
     *  [Set Watchdog](https://github.com/linsamtw/RabbitmqCelery#set-watchdog)
-    *  [PARTITION](https://github.com/linsamtw/RabbitmqCelery#PARTITION)
+    *  [PARTITION](https://github.com/linsamtw/RabbitmqCelery#partition)
 
 ----------------------------
 ## Rabbitmq & Celery
