@@ -217,7 +217,13 @@ then, paste to gitlab or github -> option -> ssh key<br>
       git reset --hard HEAD^
       git push --force
       
-      
+      # add tag
+      git log --oneline
+      git tag tagname 975a240
+      # del local tag
+      git tag -d tagname
+      # del online tag
+      git push --delete origin tagname
 -------------------------------
 ## Other
 #### Run celery on Python3
