@@ -224,6 +224,13 @@ then, paste to gitlab or github -> option -> ssh key<br>
       git tag -d tagname
       # del online tag
       git push --delete origin tagname
+      # push tag
+      git push origin tagname
+      # push all tag
+      git push origin --tags
+      # checkout
+      git checkout tagname
+      
 -------------------------------
 ## Other
 #### Run celery on Python3
